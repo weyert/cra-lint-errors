@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import { Button } from './Button';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         </p>
         <img src={logo} />
         <a onClick="javascript:void()">Button</a>
+        <Button>React Button</Button>
         <a
           className="App-link"
           href="https://reactjs.org"
