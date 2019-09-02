@@ -10,6 +10,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <img src={logo} />
+        <a onClick="javascript:void()">Button</a>
         <a
           className="App-link"
           href="https://reactjs.org"
