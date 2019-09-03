@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import { Button } from './Button';
 import './App.css';
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <img src={logo} />
-        <a onClick="javascript:void()">Button</a>
+        <a title="Button">Button</a>
+        <Button onClick={event => console.log('Hello')}>React Button</Button>
         <a
           className="App-link"
           href="https://reactjs.org"
