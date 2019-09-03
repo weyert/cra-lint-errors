@@ -22,7 +22,7 @@
     "lint:teamcity:internal": "ESLINT_TEAMCITY_REPORTER=inspections `pwd`/node_modules/.bin/eslint . --format './node_modules/eslint-teamcity/index.js'"
   },
   "jestJsonReporter": {
-    "outputFile": "coverage/results.json"
+    "outputFile": "./coverage/results.json"
   },
   "eslintConfig": {
     "extends": "react-app"
