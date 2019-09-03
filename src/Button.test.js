@@ -12,4 +12,12 @@ describe('Button', () => {
     userEvent.click(getByText('Welcome to React'))
     expect(onClick).toHaveBeenCalled()
   })
+
+  test.only('should dispatch button', async () => {
+    const onClick = jest.fn()
+    const { getByText } = render(<Button onClick={onClick}>Welcome to React</Button>)
+    expect(getByText('Welcome to React')).toBeInTheDocument()
+    userEvent.click(getByText('Welcome to React'))
+    expect(onClick).toHaveBeenCalled()
+  })
 })
