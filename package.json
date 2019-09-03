@@ -13,7 +13,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:ci": "yarn run test:export && yarn run test:teamcity",
+    "test:ci": "yarn run test:teamcity",
     "test:teamcity": "react-scripts test --env=jsdom --testResultsProcessor=jest-teamcity-reporter",
     "test:export": "react-scripts test --env=jsdom --testResultsProcessor=jest-json-reporter",
     "lint": "`pwd`/node_modules/.bin/eslint .",
