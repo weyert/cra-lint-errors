@@ -14,7 +14,9 @@
     "eject": "react-scripts eject",
     "test:ci": "react-scripts test --env=jsdom --testResultsProcessor=jest-teamcity-reporter",
     "lint": "`pwd`/node_modules/.bin/eslint .",
-    "lint:teamcity": "ESLINT_TEAMCITY_REPORTER=inspections `pwd`/node_modules/.bin/eslint . --format './node_modules/eslint-teamcity/index.js'"
+    "lint:teamcity": "yarn run lint:teamcity:export && yarn run lint:teamcity:internal",
+    "lint:teamcity:export": "mkdir -p `pwd`/coverage && `pwd`/node_modules/.bin/eslint . --format 'json' >> ./coverage/inspections.json",
+    "lint:teamcity:internal": "ESLINT_TEAMCITY_REPORTER=inspections `pwd`/node_modules/.bin/eslint . --format './node_modules/eslint-teamcity/index.js'"
   },
   "eslintConfig": {
     "extends": "react-app"
