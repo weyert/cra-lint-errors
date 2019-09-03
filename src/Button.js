@@ -5,7 +5,7 @@ export const LinkButton = ({children, onClick}) => {
     event.preventDefault()
     onClick(event)
   }
-  return (<button role="button" onClick={clickHandler}>{children}</button>)
+  return (<button title="Title" role="button" onClick={clickHandler}>{children}</button>)
 }
 
 export const Button = ({children, onClick}) => {
