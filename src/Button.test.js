@@ -13,7 +13,7 @@ describe('Button', () => {
     expect(onClick).toHaveBeenCalled()
   })
 
-  test.only('should dispatch button', async () => {
+  test.skip('should dispatch button', async () => {
     const onClick = jest.fn()
     const { getByText } = render(<Button onClick={onClick}>Welcome to React</Button>)
     expect(getByText('Welcome to React')).toBeInTheDocument()
@@ -21,11 +21,11 @@ describe('Button', () => {
     expect(onClick).toHaveBeenCalled()
   })
 
-  test.skip('should dispatch button', async () => {
+  test('failing test', async () => {
     const onClick = jest.fn()
     const { getByText } = render(<Button onClick={onClick}>Welcome to React</Button>)
     expect(getByText('Welcome to React')).toBeInTheDocument()
-    userEvent.click(getByText('Welcome to React'))
-    expect(onClick).toHaveBeenCalled()
+    userEvent.click(getByText('Welcome tox React'))
+    expect(onClick).not.toHaveBeenCalled()
   })
 })

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "jest-json-reporter": "^1.2.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1"
@@ -12,11 +13,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:ci": "react-scripts test --env=jsdom --testResultsProcessor=jest-teamcity-reporter",
+    "test:ci": "yarn run test:export && yarn run test:teamcity",
+    "test:teamcity": "react-scripts test --env=jsdom --testResultsProcessor=jest-teamcity-reporter",
+    "test:export": "react-scripts test --env=jsdom --testResultsProcessor=jest-json-reporter",
     "lint": "`pwd`/node_modules/.bin/eslint .",
     "lint:teamcity": "yarn run lint:teamcity:export && yarn run lint:teamcity:internal",
     "lint:teamcity:export": "mkdir -p `pwd`/coverage && `pwd`/node_modules/.bin/eslint . --format 'json' >> ./coverage/inspections.json",
     "lint:teamcity:internal": "ESLINT_TEAMCITY_REPORTER=inspections `pwd`/node_modules/.bin/eslint . --format './node_modules/eslint-teamcity/index.js'"
+  },
+  "jestJsonReporter": {
+    "outputFile": "coverage/results.json"
   },
   "eslintConfig": {
     "extends": "react-app"

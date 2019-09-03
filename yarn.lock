@@ -5420,6 +5420,13 @@ jest-jasmine2@^24.8.0:
     pretty-format "^24.8.0"
     throat "^4.0.0"
 
+jest-json-reporter@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/jest-json-reporter/-/jest-json-reporter-1.2.2.tgz#f2180f9cff0efa339916bbf13a2e4b1da984ad9e"
+  integrity sha1-8hgPnP8O+jOZFrvxOi5LHamErZ4=
+  dependencies:
+    read-pkg "^2.0.0"
+
 jest-leak-detector@^24.8.0:
   version "24.8.0"
   resolved "https://registry.yarnpkg.com/jest-leak-detector/-/jest-leak-detector-24.8.0.tgz#c0086384e1f650c2d8348095df769f29b48e6980"
